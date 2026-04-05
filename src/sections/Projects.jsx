@@ -63,32 +63,36 @@ const Projects = () => {
                         <motion.div 
                             key={idx} 
                             className="project-card"
+                            style={{ '--project-color': proj.color }}
                             initial={{ opacity: 0, y: 30 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
                             transition={{ duration: 0.6, delay: idx * 0.1 }}
                             whileHover={{ y: -10 }}
                         >
-                            <div className="project-image" style={{ background: `linear-gradient(45deg, ${proj.color}20, ${proj.color}40)` }}>
-                                <img src={proj.image} alt={proj.title} />
-                            </div>
-                            <div className="project-info">
-                                <h3>{proj.title}</h3>
-                                <p>{proj.desc}</p>
-
-                                <div className="tech-stack">
-                                    {proj.tech.map(t => (
-                                        <span key={t} className="tech-tag">{t}</span>
-                                    ))}
+                            <div className="project-content">
+                                <div className="project-image" style={{ background: `linear-gradient(45deg, ${proj.color}20, ${proj.color}40)` }}>
+                                    <img src={proj.image} alt={proj.title} />
+                                    <div className="project-smoke"></div>
                                 </div>
+                                <div className="project-info">
+                                    <h3>{proj.title}</h3>
+                                    <p>{proj.desc}</p>
 
-                                <div className="project-links">
-                                    <a href={proj.demoLink} target="_blank" rel="noopener noreferrer">
-                                        <ExternalLink size={18} /> Live Demo
-                                    </a>
-                                    <a href={proj.sourceLink} target="_blank" rel="noopener noreferrer">
-                                        <Github size={18} /> Source
-                                    </a>
+                                    <div className="tech-stack">
+                                        {proj.tech.map(t => (
+                                            <span key={t} className="tech-tag">{t}</span>
+                                        ))}
+                                    </div>
+
+                                    <div className="project-links">
+                                        <a href={proj.demoLink} target="_blank" rel="noopener noreferrer">
+                                            <ExternalLink size={18} /> Live Demo
+                                        </a>
+                                        <a href={proj.sourceLink} target="_blank" rel="noopener noreferrer">
+                                            <Github size={18} /> Source
+                                        </a>
+                                    </div>
                                 </div>
                             </div>
                         </motion.div>
