@@ -41,9 +41,9 @@ const About = () => {
 
                         <div className="about-stats">
                             {[
-                                { val: "3+", label: "Years Experience" },
-                                { val: "50+", label: "Projects Completed" },
-                                { val: "15+", label: "Happy Clients" }
+                                { val: "3+", label: "Months Experience" },
+                                { val: "6+", label: "Projects Completed" },
+                                { val: "2+", label: "Happy Clients" }
                             ].map((stat, i) => (
                                 <motion.div 
                                     key={i} 

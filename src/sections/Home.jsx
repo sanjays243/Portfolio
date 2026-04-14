@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion';
 import { ArrowRight, Download } from 'lucide-react';
 import profileImg from '../assets/profile.jpg.jpg';
+import cvPdf from '../assets/SANJAY S.pdf';
 import './Home.css';
 
 const Home = () => {
@@ -63,7 +64,7 @@ const Home = () => {
                             View Work <ArrowRight size={20} />
                         </motion.a>
                         <motion.a 
-                            href="/SANJAY_CV.pdf" 
+                            href={cvPdf} 
                             download="Sanjay_CV.pdf" 
                             className="btn btn-outline"
                             whileHover={{ scale: 1.05, translateY: -3 }}
